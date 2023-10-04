@@ -29,14 +29,14 @@ public:
         }
 
         ListNode* next_node = head->next;
-        ListNode* new_next = nullptr;
+        ListNode* new_next_node = nullptr;
         head->next = nullptr;
 
         while (next_node) {
-            new_next = next_node->next;
+            new_next_node = next_node->next;
             next_node->next = head;
             head = next_node;
-            next_node = new_next;
+            next_node = new_next_node;
         }
 
         return head;
