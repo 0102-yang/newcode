@@ -1,7 +1,4 @@
-#include <algorithm>
-#include <functional>
-#include <vector>
-using namespace std;
+#include "../common-header.hpp"
 
 class Solution
 {

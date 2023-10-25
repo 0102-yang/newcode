@@ -1,5 +1,4 @@
-#include <string>
-#include <unordered_map>
+#include "../common-header.hpp"
 
 class Solution
 {

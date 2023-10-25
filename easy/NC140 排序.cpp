@@ -1,5 +1,4 @@
-#include <vector>
-using namespace std;
+#include "../common-header.hpp"
 
 /**
  * 快速排序算法

@@ -1,6 +1,4 @@
-#include <algorithm>
-#include <vector>
-using namespace std;
+#include "../common-header.hpp"
 
 class BestSolution
 {
