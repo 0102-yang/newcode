@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <list>
+#include <stack>
 #include <string>
 #include <unordered_map>
 using namespace std;
