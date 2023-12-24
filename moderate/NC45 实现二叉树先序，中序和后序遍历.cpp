@@ -1,13 +1,5 @@
 #include "../common-header.hpp"
 
-struct TreeNode
-{
-    int val;
-    struct TreeNode* left;
-    struct TreeNode* right;
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-};
-
 /**
  * struct TreeNode {
  *	int val;
@@ -36,7 +28,7 @@ public:
     }
 
 private:
-    void preOrder(vector<int>& order, TreeNode* root)
+    void preOrder(vector<int>& order, const TreeNode* root)
     {
         if (!root) {
             return;
@@ -47,7 +39,7 @@ private:
         preOrder(order, root->right);
     }
 
-    void inOrder(vector<int>& order, TreeNode* root)
+    void inOrder(vector<int>& order, const TreeNode* root)
     {
         if (!root) {
             return;
@@ -58,7 +50,7 @@ private:
         inOrder(order, root->right);
     }
 
-    void postOrder(vector<int>& order, TreeNode* root)
+    void postOrder(vector<int>& order, const TreeNode* root)
     {
         if (!root) {
             return;

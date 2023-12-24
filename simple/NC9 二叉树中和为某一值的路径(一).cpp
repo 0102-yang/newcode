@@ -1,3 +1,5 @@
+#include "../common-header.hpp"
+
 /**
  * struct TreeNode {
  *	int val;
@@ -6,13 +8,6 @@
  *	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
  * };
  */
-struct TreeNode
-{
-    int val;
-    struct TreeNode* left;
-    struct TreeNode* right;
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-};
 
 class Solution
 {

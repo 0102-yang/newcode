@@ -1,3 +1,5 @@
+#include "../common-header.hpp"
+
 /*
 struct ListNode {
     int val;
@@ -6,14 +8,6 @@ struct ListNode {
             val(x), next(NULL) {
     }
 };*/
-#include <cmath>
-
-struct ListNode
-{
-    int val;
-    struct ListNode* next;
-    ListNode(int x) : val(x), next(nullptr) {}
-};
 
 // Best Solution
 class BestSolution
@@ -22,7 +16,7 @@ public:
     ListNode* FindFirstCommonNode(ListNode* pHead1, ListNode* pHead2)
     {
         ListNode* node1 = pHead1;
-        ListNode* node2 = pHead2;
+        const ListNode* node2 = pHead2;
         while (node1 != node2) {
             node1 = !node1 ? pHead2 : node1->next;
             node2 = !node2 ? pHead1 : node2->next;
@@ -41,9 +35,9 @@ public:
             return nullptr;
         }
 
-        int length1 = GetListLength(pHead1);
-        int length2 = GetListLength(pHead2);
-        int steps_to_move = abs(length1 - length2);
+        const int length1 = GetListLength(pHead1);
+        const int length2 = GetListLength(pHead2);
+        const int steps_to_move = abs(length1 - length2);
         for (int i = 0; i < steps_to_move; i++) {
             if (length1 > length2) {
                 pHead1 = pHead1->next;

@@ -1,3 +1,5 @@
+#include "../common-header.hpp"
+
 /**
  * struct ListNode {
  *  int val;
@@ -5,12 +7,6 @@
  *  ListNode(int x) : val(x), next(nullptr) {}
  * };
  */
-struct ListNode
-{
-    int val;
-    struct ListNode* next;
-    ListNode(int x) : val(x), next(nullptr) {}
-};
 
 class Solution
 {

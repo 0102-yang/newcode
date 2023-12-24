@@ -15,8 +15,8 @@ public:
     {
         // write code here
         int left = 0, right = 0, maxlength = 0;
-        for (int i = 0; i < s.length(); i++) {
-            if (s[i] == '(') {
+        for (const char i : s) {
+            if (i == '(') {
                 left++;
             } else {
                 right++;
@@ -28,7 +28,7 @@ public:
             }
         }
         left = right = 0;
-        for (int i = (int)s.length() - 1; i >= 0; i--) {
+        for (int i = static_cast<int>(s.length() - 1); i >= 0; i--) {
             if (s[i] == '(') {
                 left++;
             } else {
@@ -57,8 +57,8 @@ public:
      */
     int longestValidParentheses(string s)
     {
-        vector<int> dp(s.length(), 0);
-        const int str_length = s.length();
+        vector dp(s.length(), 0);
+        const auto str_length = static_cast<int>(s.length());
 
         for (int i = 1; i < str_length; i++) {
             if (s[i] == ')') {
@@ -70,6 +70,6 @@ public:
             }
         }
 
-        return *max_element(dp.begin(), dp.end());
+        return *ranges::max_element(dp);
     }
 };

@@ -13,10 +13,10 @@ public:
     int minNumberInRotateArray(vector<int>& nums)
     {
         int left = 0;
-        int right = nums.size() - 1;
+        int right = static_cast<int>(nums.size() - 1);
 
         while (left < right) {
-            int mid = (left + right) / 2;
+            const int mid = (left + right) / 2;
             if (nums[mid] > nums[right]) {
                 left = mid + 1;
             } else if (nums[mid] < nums[right]) {
@@ -40,7 +40,7 @@ public:
      * @param nums int整型vector
      * @return int整型
      */
-    int minNumberInRotateArray(vector<int>& nums) { return minNumberInRotateArray(nums, 0, nums.size() - 1); }
+    int minNumberInRotateArray(vector<int>& nums) { return minNumberInRotateArray(nums, 0, static_cast<int>(nums.size() - 1)); }
 
 private:
     int minNumberInRotateArray(const vector<int>& nums, int left, int right)

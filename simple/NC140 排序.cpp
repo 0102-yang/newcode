@@ -20,12 +20,12 @@ public:
     }
 
 private:
-    void MySort(vector<int>& arr, int left, int right)
+    void MySort(vector<int>& arr, const unsigned left, const unsigned right)
     {
         if (left < right) {
-            int pivot = arr[left];
-            int low = left + 1;
-            int high = right;
+            const int pivot = arr[left];
+            unsigned low = left + 1;
+            unsigned high = right;
 
             while (true) {
                 while (low <= high && arr[high] >= pivot) {

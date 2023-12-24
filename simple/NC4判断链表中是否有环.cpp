@@ -1,3 +1,5 @@
+#include "../common-header.hpp"
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -6,20 +8,14 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-struct ListNode
-{
-    int val;
-    struct ListNode* next;
-    ListNode(int x) : val(x), next(nullptr) {}
-};
 
 class Solution
 {
 public:
     bool hasCycle(ListNode* head)
     {
-        ListNode* slow = head;
-        ListNode* fast = head;
+        const ListNode* slow = head;
+        const ListNode* fast = head;
 
         while (fast && fast->next && fast->next->next) {
             slow = slow->next;

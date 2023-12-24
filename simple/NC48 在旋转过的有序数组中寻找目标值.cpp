@@ -14,13 +14,13 @@ public:
     int search(vector<int>& nums, int target)
     {
         int left = 0;
-        int right = nums.size() - 1;
+        int right = static_cast<int>(nums.size() - 1);
 
         while (left <= right) {
-            int mid = (left + right) / 2;
-            int left_num = nums[left];
-            int right_num = nums[right];
-            int mid_num = nums[mid];
+            const int mid = (left + right) / 2;
+            const int left_num = nums[left];
+            const int right_num = nums[right];
+            const int mid_num = nums[mid];
 
             if (mid_num == target) {
                 return mid;

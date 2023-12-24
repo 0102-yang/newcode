@@ -18,7 +18,7 @@ public:
         class Adder
         {
         public:
-            char operator()(char a, char b)
+            char operator()(const char a, const char b)
             {
                 char added_char = a + b - '0' + (carry_flag ? 1 : 0);
                 if (added_char > '9') {
@@ -35,8 +35,8 @@ public:
         };
 
         Adder adder;
-        const int s_length = s.length();
-        const int t_length = t.length();
+        const int s_length = static_cast<int>(s.length());
+        const int t_length = static_cast<int>(t.length());
         const int min_length = min(s_length, t_length);
         const int max_length = max(s_length, t_length);
         const string& longer_str = s_length > t_length ? s : t;
@@ -61,7 +61,7 @@ public:
             result.push_back('1');
         }
 
-        reverse(result.begin(), result.end());
+        ranges::reverse(result);
         return result;
     }
 };

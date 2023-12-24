@@ -7,17 +7,16 @@ public:
 
     int get(int key)
     {
-        if (key_value_.count(key) > 0) {
+        if (key_value_.contains(key)) {
             update_key(key);
             return key_value_[key];
-        } else {
-            return -1;
         }
+        return -1;
     }
 
-    void set(int key, int value)
+    void set(const int key, const int value)
     {
-        if (key_value_.count(key) > 0) {
+        if (key_value_.contains(key)) {
             update_key(key);
             key_value_[key] = value;
         } else {
@@ -34,7 +33,7 @@ private:
     unordered_map<int, int> key_value_;
     list<int> insert_key_order_;
 
-    void update_key(int key)
+    void update_key(const int key)
     {
         insert_key_order_.remove(key);
         insert_key_order_.push_back(key);
@@ -42,7 +41,7 @@ private:
 
     void remove_lru_key()
     {
-        auto last_recent_used_key = insert_key_order_.front();
+        const auto last_recent_used_key = insert_key_order_.front();
         insert_key_order_.pop_front();
         key_value_.erase(last_recent_used_key);
         size_--;

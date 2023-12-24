@@ -15,8 +15,8 @@ public:
             itr = itr->next;
         }
 
-        int half_size = node_addresses.size() / 2;
-        vector<ListNode*> right_half_node_addresses(node_addresses.begin() + half_size, node_addresses.end());
+        const int half_size = node_addresses.size() / 2;
+        vector right_half_node_addresses(node_addresses.begin() + half_size, node_addresses.end());
         reverse(right_half_node_addresses.begin(), right_half_node_addresses.end());
 
         for (int i = 0; i < half_size; i++) {
@@ -51,7 +51,7 @@ public:
         // Get right head
         ListNode* right_head_prev = nullptr;
         ListNode* right_head = head;
-        int half_length = length / 2;
+        const int half_length = length / 2;
         for (int i = 0; i < half_length; i++) {
             right_head_prev = right_head;
             right_head = right_head->next;
@@ -81,11 +81,10 @@ private:
     ListNode* ReverseList(ListNode* head)
     {
         ListNode* next_node = head->next;
-        ListNode* new_next_node = nullptr;
         head->next = nullptr;
 
         while (next_node) {
-            new_next_node = next_node->next;
+            ListNode* new_next_node = next_node->next;
             next_node->next = head;
             head = next_node;
             next_node = new_next_node;
@@ -94,7 +93,7 @@ private:
         return head;
     }
 
-    int GetListLength(ListNode* head)
+    int GetListLength(const ListNode* head)
     {
         int length = 0;
         while (head) {

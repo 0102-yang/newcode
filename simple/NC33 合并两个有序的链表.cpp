@@ -1,3 +1,5 @@
+#include "../common-header.hpp"
+
 /**
  * struct ListNode {
  *  int val;
@@ -5,12 +7,6 @@
  *  ListNode(int x) : val(x), next(nullptr) {}
  * };
  */
-struct ListNode
-{
-    int val;
-    struct ListNode* next;
-    ListNode(int x) : val(x), next(nullptr) {}
-};
 
 class Solution
 {
@@ -34,7 +30,7 @@ public:
         }
 
         // 确认新的头节点。
-        ListNode* new_head = nullptr;
+        ListNode* new_head;
         if (pHead1->val <= pHead2->val) {
             new_head = pHead1;
             pHead1 = pHead1->next;
