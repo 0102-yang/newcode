@@ -21,40 +21,31 @@ public:
      */
     ListNode* Merge(ListNode* pHead1, ListNode* pHead2)
     {
-        // 判空。
-        if (!pHead1) {
-            return pHead2;
-        }
-        if (!pHead2) {
-            return pHead1;
-        }
+        ListNode new_head_aux(0);
+        ListNode* tail = &new_head_aux;
 
-        // 确认新的头节点。
-        ListNode* new_head;
-        if (pHead1->val <= pHead2->val) {
-            new_head = pHead1;
-            pHead1 = pHead1->next;
-        } else {
-            new_head = pHead2;
-            pHead2 = pHead2->next;
-        }
-        ListNode* new_tail = new_head;
-
-        // 有序连接节点。
-        while (pHead1 && pHead2) {
-            if (pHead1->val <= pHead2->val) {
-                new_tail->next = pHead1;
-                new_tail = pHead1;
-                pHead1 = pHead1->next;
+        while (pHead1 || pHead2) {
+            if (pHead1 && pHead2) {
+                ListNode* tmp;
+                if (pHead1->val < pHead2->val) {
+                    tmp = pHead1;
+                    pHead1 = pHead1->next;
+                } else {
+                    tmp = pHead2;
+                    pHead2 = pHead2->next;
+                }
+                tail->next = tmp;
+                tail = tmp;
+            } else if (pHead1) {
+                tail->next = pHead1;
+                break;
             } else {
-                new_tail->next = pHead2;
-                new_tail = pHead2;
-                pHead2 = pHead2->next;
+                tail->next = pHead2;
+                break;
             }
         }
 
-        // 拼接剩下的节点。
-        new_tail->next = pHead1 ? pHead1 : pHead2;
+        ListNode* new_head = new_head_aux.next;
         return new_head;
     }
 };
