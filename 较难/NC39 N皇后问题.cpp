@@ -13,31 +13,31 @@ public:
     int Nqueen(int n)
     {
         // write code here
-        int res = 0;
-        vector pos(n, 0);
-        Recursion(n, 0, pos, res);
-        return res;
+        int result = 0;
+        vector board(n, 0);
+        Nqueen(n, 0, board, result);
+        return result;
     }
 
 private:
-    static bool IsValid(const vector<int>& pos, const int row, const int col)
+    static bool IsValid(const vector<int>& board, const int row, const int col)
     {
         for (int i = 0; i < row; i++) {
-            if (row == i || col == pos[i] || abs(row - i) == abs(col - pos[i])) return false;
+            if (row == i || col == board[i] || abs(row - i) == abs(col - board[i])) return false;
         }
         return true;
     }
 
-    static void Recursion(const int n, const int row, vector<int>& pos, int& res)
+    static void Nqueen(const int n, const int row, vector<int>& board, int& result)
     {
         if (row == n) {
-            res++;
+            result++;
             return;
         }
         for (int col = 0; col < n; col++) {
-            if (IsValid(pos, row, col)) {
-                pos[row] = col;
-                Recursion(n, row + 1, pos, res);
+            if (IsValid(board, row, col)) {
+                board[row] = col;
+                Nqueen(n, row + 1, board, result);
             }
         }
     }
