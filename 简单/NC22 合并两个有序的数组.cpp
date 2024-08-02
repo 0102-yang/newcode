@@ -3,7 +3,7 @@
 class Solution
 {
 public:
-    void merge(int A[], int m, int B[], int n)
+    void merge(int A[], const int m, int B[], const int n)
     {
         int copy_to_index = m + n - 1;
         int copy_from_a_index = m - 1;

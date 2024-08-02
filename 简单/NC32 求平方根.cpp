@@ -3,7 +3,7 @@
 class Solution
 {
 public:
-    int sqrt(int x)
+    int sqrt(const int x)
     {
         if (x == 1) {
             return 1;
@@ -32,7 +32,7 @@ public:
 class BestSolution
 {
 public:
-    int sqrt(int x)
+    int sqrt(const int x)
     {
         if (x <= 0) {
             return 0;

@@ -20,7 +20,7 @@ public:
      * @param sum int整型 
      * @return bool布尔型
      */
-    bool hasPathSum(TreeNode* root, int sum)
+    bool hasPathSum(const TreeNode* root, int sum)
     {
         if (!root) {
             return false;

@@ -10,7 +10,7 @@ public:
      * @param pRoot TreeNode类 
      * @return bool布尔型
      */
-    bool isSymmetrical(TreeNode* pRoot)
+    bool isSymmetrical(const TreeNode* pRoot)
     {
         if (!pRoot) {
             return true;
@@ -20,7 +20,7 @@ public:
     }
 
 private:
-    bool equal(TreeNode* t1, TreeNode* t2)
+    bool equal(const TreeNode* t1, const TreeNode* t2)
     {
         if (!t1 && !t2) {
             return true;

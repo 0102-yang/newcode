@@ -4,13 +4,10 @@ class Solution
 {
 public:
     /**
-     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
-     *
-     * 
-     * @param n int整型 the n
-     * @return int整型
+     * @param n The n.
+     * @return The number of queen.
      */
-    int Nqueen(int n)
+    int Nqueen(const int n)
     {
         // write code here
         int result = 0;

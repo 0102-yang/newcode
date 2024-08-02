@@ -18,7 +18,7 @@ public:
      * @param root TreeNode类 the root of binary tree
      * @return int整型vector<vector<>>
      */
-    vector<vector<int>> threeOrders(TreeNode* root)
+    vector<vector<int>> threeOrders(const TreeNode* root)
     {
         vector<vector<int>> orders(3);
         preOrder(orders[0], root);

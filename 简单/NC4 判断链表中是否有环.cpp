@@ -12,7 +12,7 @@
 class Solution
 {
 public:
-    bool hasCycle(ListNode* head)
+    bool hasCycle(const ListNode* head)
     {
         const ListNode* slow = head;
         const ListNode* fast = head;

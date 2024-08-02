@@ -6,12 +6,7 @@
 class BestSolution
 {
 public:
-    /**
-     * 
-     * @param s string字符串 
-     * @return int整型
-     */
-    int longestValidParentheses(string s)
+    int longestValidParentheses(const string& s)
     {
         // write code here
         int left = 0, right = 0, maxlength = 0;
@@ -55,7 +50,7 @@ public:
      * @param s string字符串 
      * @return int整型
      */
-    int longestValidParentheses(string s)
+    int longestValidParentheses(const string& s)
     {
         vector dp(s.length(), 0);
         const auto str_length = static_cast<int>(s.length());

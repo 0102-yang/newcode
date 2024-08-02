@@ -3,15 +3,7 @@
 class Solution
 {
 public:
-    /**
-     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
-     *
-     * lfu design
-     * @param operators int整型vector<vector<>> ops
-     * @param k int整型 the k
-     * @return int整型vector
-     */
-    vector<int> LFU(vector<vector<int>>& operators, int k)
+    vector<int> LFU(const vector<vector<int>>& operators, const int k)
     {
         vector<int> res;
         k_ = static_cast<size_t>(k);

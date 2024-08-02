@@ -3,7 +3,7 @@
 class Solution
 {
 public:
-    vector<int> FindNumsAppearOnce(vector<int>& nums)
+    vector<int> FindNumsAppearOnce(const vector<int>& nums)
     {
         vector<int> res;
         res.reserve(2);
@@ -26,7 +26,7 @@ public:
 class BestSolution
 {
 public:
-    vector<int> FindNumsAppearOnce(vector<int>& nums)
+    vector<int> FindNumsAppearOnce(const vector<int>& nums)
     {
         int tmp = 0;
         for (const int& num : nums) {

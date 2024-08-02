@@ -3,7 +3,7 @@
 class Solution
 {
 public:
-    int solve(vector<vector<char>>& grid) {
+    int solve(const vector<vector<char>>& grid) {
         int res = 0;
         const int m = grid.size();
         const int n = grid[0].size();

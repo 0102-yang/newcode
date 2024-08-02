@@ -3,7 +3,7 @@
 class Solution
 {
 public:
-    string LCS(string s1, string s2)
+    string LCS(const string& s1, const string& s2)
     {
         auto len1 = s1.length();
         auto len2 = s2.length();

@@ -10,7 +10,7 @@ public:
      * @param prices int整型vector 
      * @return int整型
      */
-    int maxProfit(vector<int>& prices)
+    int maxProfit(const vector<int>& prices)
     {
         int min_price = 1234567890;
         int max_profit = 0;

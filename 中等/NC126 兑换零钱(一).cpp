@@ -3,7 +3,7 @@
 class Solution
 {
 public:
-    int minMoney(vector<int>& arr, int aim)
+    int minMoney(const vector<int>& arr, const int aim)
     {
         vector dp(aim + 1, aim + 1);
         dp[0] = 0;

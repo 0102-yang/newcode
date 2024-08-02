@@ -3,7 +3,7 @@
 class Solution
 {
 public:
-    int editDistance(string str1, string str2)
+    int editDistance(const string& str1, const string& str2)
     {
         const auto length1 = str1.length();
         const auto length2 = str2.length();

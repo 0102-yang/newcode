@@ -10,7 +10,7 @@ public:
      * @param nums int整型vector
      * @return int整型
      */
-    int minNumberInRotateArray(vector<int>& nums)
+    int minNumberInRotateArray(const vector<int>& nums)
     {
         int left = 0;
         int right = static_cast<int>(nums.size() - 1);
@@ -40,10 +40,10 @@ public:
      * @param nums int整型vector
      * @return int整型
      */
-    int minNumberInRotateArray(vector<int>& nums) { return minNumberInRotateArray(nums, 0, static_cast<int>(nums.size() - 1)); }
+    int minNumberInRotateArray(const vector<int>& nums) { return minNumberInRotateArray(nums, 0, static_cast<int>(nums.size() - 1)); }
 
 private:
-    int minNumberInRotateArray(const vector<int>& nums, int left, int right)
+    int minNumberInRotateArray(const vector<int>& nums, const int left, const int right)
     {
         if (abs(left - right) <= 1) {
             return min(nums[left], nums[right]);

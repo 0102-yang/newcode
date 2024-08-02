@@ -13,7 +13,7 @@ public:
      * @param t string字符串 表示第二个整数
      * @return string字符串
      */
-    string solve(string s, string t)
+    string solve(const string& s, const string& t)
     {
         class Adder
         {

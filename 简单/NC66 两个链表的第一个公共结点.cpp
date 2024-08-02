@@ -58,7 +58,7 @@ public:
     }
 
 private:
-    int GetListLength(ListNode* head)
+    int GetListLength(const ListNode* head)
     {
         int length = 0;
         while (head) {

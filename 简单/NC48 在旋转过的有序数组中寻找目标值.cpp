@@ -11,7 +11,7 @@ public:
      * @param target int整型 
      * @return int整型
      */
-    int search(vector<int>& nums, int target)
+    int search(const vector<int>& nums, const int target)
     {
         int left = 0;
         int right = static_cast<int>(nums.size() - 1);

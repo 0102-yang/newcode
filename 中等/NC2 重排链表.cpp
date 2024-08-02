@@ -17,7 +17,7 @@ public:
 
         const int half_size = node_addresses.size() / 2;
         vector right_half_node_addresses(node_addresses.begin() + half_size, node_addresses.end());
-        reverse(right_half_node_addresses.begin(), right_half_node_addresses.end());
+        ranges::reverse(right_half_node_addresses);
 
         for (int i = 0; i < half_size; i++) {
             if (i != 0) {

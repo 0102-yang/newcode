@@ -3,7 +3,7 @@
 class Solution
 {
 public:
-    int minNumberDisappeared(vector<int>& nums)
+    int minNumberDisappeared(const vector<int>& nums)
     {
         unordered_set<int> nums_exist;
 

@@ -10,7 +10,7 @@ public:
      * @param str string字符串
      * @return int整型
      */
-    int FirstNotRepeatingChar(string str)
+    int FirstNotRepeatingChar(const string& str)
     {
         std::unordered_map<char, int> character_count;
 

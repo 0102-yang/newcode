@@ -3,9 +3,9 @@
 class Solution
 {
 public:
-    Solution(int capacity) : capacity_(capacity) {}
+    Solution(const int capacity) : capacity_(capacity) {}
 
-    int get(int key)
+    int get(const int key)
     {
         if (key_value_.contains(key)) {
             update_key(key);

@@ -3,7 +3,7 @@
 class Solution
 {
 public:
-    vector<int> maxInWindows(vector<int>& num, int size)
+    vector<int> maxInWindows(const vector<int>& num, const int size)
     {
         vector<int> max_values;
         if (size == 0 || static_cast<size_t>(size) > num.size()) {
