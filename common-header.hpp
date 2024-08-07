@@ -1,6 +1,9 @@
+#pragma once
+
 #include <algorithm>
 #include <list>
 #include <map>
+#include <queue>
 #include <set>
 #include <stack>
 #include <string>
